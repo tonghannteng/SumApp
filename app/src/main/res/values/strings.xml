@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVPCalculate</string>
+    <string name="firstNumberError">First Number Error</string>
+    <string name="secondSecondError">Second Number Error</string>
+</resources>

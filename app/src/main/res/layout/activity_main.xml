@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context="com.tengtonghann.android.mvpcalculate.MainActivity">
+
+    <EditText
+        android:id="@+id/firstNumberId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Number" />
+
+    <EditText
+        android:id="@+id/secondNumberId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Second Number" />
+
+    <Button
+        android:id="@+id/sumId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickSum"
+        android:text="Sum" />
+
+    <EditText
+        android:id="@+id/resultId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Reult" />
+
+</LinearLayout>
