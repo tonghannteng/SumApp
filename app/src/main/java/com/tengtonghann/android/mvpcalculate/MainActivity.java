@@ -2,6 +2,7 @@ package com.tengtonghann.android.mvpcalculate;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -57,11 +58,11 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void showResultTheResult() {
-
         String result = new SumService()
                 .sumNumber(et_firstNumber.getText().toString(), et_secondNumber.getText().toString());
-
         et_result.setText(result);
-
+        Log.d("TAG", result);
+        Log.d("TAG", result);
+        Log.d("TAG", result);
     }
 }
