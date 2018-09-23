@@ -64,5 +64,8 @@ public class MainActivity extends BaseActivity {
         Log.d("TAG", result);
         Log.d("TAG", result);
         Log.d("TAG", result);
+        Log.d("TAG", result);
+        Log.d("TAG", result);
+        Log.d("TAG", result);
     }
 }
