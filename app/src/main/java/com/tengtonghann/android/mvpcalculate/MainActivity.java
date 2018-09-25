@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import net.hockeyapp.android.UpdateManager;
+
 public class MainActivity extends BaseActivity {
 
 
@@ -18,11 +20,22 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void init(Bundle savedInstanceState) {
 
+        checkForUpdates();
         et_firstNumber = (EditText) findViewById(R.id.firstNumberId);
         et_secondNumber = (EditText) findViewById(R.id.secondNumberId);
         et_result = (EditText) findViewById(R.id.resultId);
 
         mMainPresenter = new MainPresenter(this, new SumService());
+
+    }
+
+    private void checkForUpdates() {
+        // Remove this for store builds!
+        UpdateManager.register(this);
+    }
+
+    private void unregisterManagers() {
+        UpdateManager.unregister();
     }
 
     @Override
@@ -61,11 +74,11 @@ public class MainActivity extends BaseActivity {
         String result = new SumService()
                 .sumNumber(et_firstNumber.getText().toString(), et_secondNumber.getText().toString());
         et_result.setText(result);
-        Log.d("TAG", result);
-        Log.d("TAG", result);
-        Log.d("TAG", result);
-        Log.d("TAG", result);
-        Log.d("TAG", result);
-        Log.d("TAG", result);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterManagers();
     }
 }
