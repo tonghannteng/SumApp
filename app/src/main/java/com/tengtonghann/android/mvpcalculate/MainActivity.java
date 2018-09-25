@@ -12,9 +12,9 @@ import net.hockeyapp.android.UpdateManager;
 public class MainActivity extends BaseActivity {
 
 
-    private EditText et_firstNumber;
-    private EditText et_secondNumber;
-    private EditText et_result;
+    private EditTexst et_firstNumber;
+    private EditTexst et_secondNumber;
+    private EditTexts et_result;
     private MainPresenter mMainPresenter;
 
     @Override
